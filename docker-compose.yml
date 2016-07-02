@@ -1,0 +1,14 @@
+version: '2.0'
+
+services:
+
+### Apache HTTP Container ###
+
+    apache:
+        build: ./
+        volumes:
+            - ../:/var/www/site
+            - ./logs/apache/:/var/log/apache2
+        ports:
+            - "80:80"
+            - "443:443"
