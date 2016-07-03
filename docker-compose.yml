@@ -6,6 +6,7 @@ services:
 
     apache:
         build: ./
+        container_name: apache-php5
         volumes:
             - ../:/var/www/site
             - ./logs/apache/:/var/log/apache2
